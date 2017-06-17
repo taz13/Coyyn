@@ -6,12 +6,19 @@
 #
 default: &default
   adapter: mysql2
-  pool: 5
-  timeout: 5000
+  encoding: utf8
+  database: Coyyn_DB
   username: root
   password: 34252683
-  database: coyyn_db
-  socket: /cloudsql/coyyn-rent-management:us-central1:coyyn1
+  host: coyyn-db.cgpjbdukmbba.us-east-2.rds.amazonaws.com
+  port: 3306
+#  adapter: mysql2
+#  pool: 5
+#  timeout: 5000
+#  username: root
+#  password: 34252683
+#  database: coyyn_db
+#  socket: /cloudsql/coyyn-rent-management:us-central1:coyyn1
 #  adapter: sqlite3
 #  pool: 5
 #  timeout: 5000
@@ -28,10 +35,17 @@ test:
   #database: db/test.sqlite3
 
 production:
-  adapter: mysql2
-  pool: 5
-  timeout: 5000
-  username: root
-  password: 34252683
-  database: coyyn_db
-  socket: /cloudsql/coyyn-rent-management:us-central1:coyyn1
+    adapter: mysql2
+    encoding: utf8
+    database: Coyyn_DB
+    username: root
+    password: 34252683
+    host: coyyn-db.cgpjbdukmbba.us-east-2.rds.amazonaws.com
+    port: 3306
+#  adapter: mysql2
+#  pool: 5
+#  timeout: 5000
+#  username: root
+#  password: 34252683
+#  database: coyyn_db
+#  socket: /cloudsql/coyyn-rent-management:us-central1:coyyn1
