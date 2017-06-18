@@ -9,7 +9,7 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.3'
 #AWS SDK
- gem 'aws-sdk'
+# gem 'aws-sdk'
 #brcypt for encrypting password
 gem 'bcrypt-ruby', '3.1.5', :require => 'bcrypt'
 # Added mysql2 for tutorial
@@ -18,6 +18,7 @@ gem 'mysql2'
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
+gem 'figaro'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -52,6 +53,11 @@ group :development do
   gem 'listen',                '3.0.8'
   gem 'spring',                '1.7.2'
   gem 'spring-watcher-listen', '2.0.0'
+  gem 'capistrano'
+  gem 'capistrano3-puma'
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rvm'
 end
 
 group :test do
@@ -62,7 +68,7 @@ group :test do
 end
 
 group :production do
-  # gem 'pg', '0.18.4'
+  gem 'pg', '0.18.4'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
