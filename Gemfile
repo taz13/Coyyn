@@ -11,7 +11,10 @@ gem 'rails', '~> 5.0.3'
 #AWS SDK
  # gem 'aws-sdk'
 #brcypt for encrypting password
-gem 'bcrypt-ruby', '3.1.5', :require => 'bcrypt'
+# gem 'bcrypt','~>3.1.11'
+# gem 'bcrypt-ruby', '3.1.5', :require => 'bcrypt'
+gem 'bcrypt', '~> 3.1.7'
+gem 'faker', '1.7.3'
 # Added mysql2 for tutorial
 gem 'mysql2'
 # Use sqlite3 as the database for Active Record
